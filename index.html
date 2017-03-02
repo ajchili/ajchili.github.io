@@ -7,35 +7,62 @@
         <link rel="stylesheet" href="css/uikit.min.css" />
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         <script src="js/uikit.min.js"></script>
+        <script src="js/uikit-icons.min.js"></script>
     </head>
     <body>
-        <div id="page">
+        <div id="mobile-page" class="uk-hidden@m">
+            <section id="mobile-home">
+                <div id="bio" class="uk-flex uk-flex-center">
+                    <img id="profile-picture" src="images/profile-picture.JPG" />
+                    <div class="uk-card uk-card-default uk-card-body uk-background-muted">
+                        <p class="uk-text-lead">Kirin Patel</p>
+                        <p class="uk-text-meta">graphics designer and <b class="uk-text-bold">developer</b></p>
+                    </div>
+                </div>
+                <div class="uk-flex uk-flex-center">
+                    <a href="#mobile-projects" uk-icon="icon: arrow-down; ratio: 2.5" uk-scroll></a>
+                </div>
+            </section>
+            <section id="mobile-projects">
+            </section>
+            <section id="mobile-contact">
+            </section>
+            <section id="mobile-about">
+            </section>
+        </div>
+        <div id="desktop-page" class="uk-visible@m">
             <div uk-sticky>
                 <header id="header">
                     <nav class="uk-navbar-container uk-navbar-transparent" uk-navbar="mode: click">
                         <div class="uk-navbar-left">
                             <ul class="uk-navbar-nav">
-                                <li><a href="#home" uk-scroll>Home</a></li>
+                                <li><a href="#desktop-home" uk-scroll>Home</a></li>
                                 <li><a>Projects</a>
                                     <div class="uk-navbar-dropdown">
                                         <ul class="uk-nav uk-navbar-dropdown-nav">
-                                            <li><a href="#web">Web</a></li>
-                                            <li><a href="#mobile">Mobile</a></li>
-                                            <li><a href="#desktop">Desktop</a></li>
+                                            <li><a href="#desktop-projects-web">Web</a></li>
+                                            <li><a href="#desktop-projects-mobile">Mobile</a></li>
+                                            <li><a href="#desktop-projects-desktop">Desktop</a></li>
                                         </ul>
                                     </div>
                                 </li>
-                                <li><a href="#contact" uk-scroll>Contact</a></li>
+                                <li><a href="#desktop-contact" uk-scroll>Contact</a></li>
+                                <li><a href="#desktop-about" uk-scroll>About Me</a></li>
                             </ul>
                         </div>
                     </nav>
                 </header>
             </div>
-            <section id="home">
+            <section id="desktop-home">
+                <div id="bio" class="uk-flex uk-flex-center">
+                    
+                </div>
             </section>
-            <section id="projects">
+            <section id="desktop-projects">
             </section>
-            <section id="contact">
+            <section id="desktop-contact">
+            </section>
+            <section id="desktop-about">
             </section>
         </div>
     </body>
