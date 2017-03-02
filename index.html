@@ -10,13 +10,33 @@
     </head>
     <body>
         <div id="page">
-            <header>
-                <div uk-sticky="bottom: #offset">
-                    sddsfsdfsdfsdf
-                </div>
-            </header>
-            <section id="one" style="height: 10000px;"></section>
-            <section id="two"></section>
+            <div uk-sticky>
+                <header id="header">
+                    <nav class="uk-navbar-container uk-navbar-transparent" uk-navbar="mode: click">
+                        <div class="uk-navbar-left">
+                            <ul class="uk-navbar-nav">
+                                <li><a href="#home" uk-scroll>Home</a></li>
+                                <li><a>Projects</a>
+                                    <div class="uk-navbar-dropdown">
+                                        <ul class="uk-nav uk-navbar-dropdown-nav">
+                                            <li><a href="#web">Web</a></li>
+                                            <li><a href="#mobile">Mobile</a></li>
+                                            <li><a href="#desktop">Desktop</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li><a href="#contact" uk-scroll>Contact</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                </header>
+            </div>
+            <section id="home">
+            </section>
+            <section id="projects">
+            </section>
+            <section id="contact">
+            </section>
         </div>
     </body>
 </html>
