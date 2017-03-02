@@ -4,12 +4,16 @@
 }
 
 section {
-    height: 100vh;
+    min-height: 100vh;
 }
 
 #bio {
-    margin-top: 35vh;
+    padding-top: 35vh;
     margin-bottom: 35vh;
+}
+
+#project {
+    margin-top: 3em;
 }
 
 #desktop-home {
