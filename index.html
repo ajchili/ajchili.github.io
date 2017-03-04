@@ -2,150 +2,311 @@
 <html>
     <head>
         <title>Kirin Patel</title>
-        
+
+        <link rel="stylesheet" href="css/kirinpatel.css" />
         <link rel="stylesheet" href="css/uikit.min.css" />
-        <link rel="stylesheet" href="css/mycss.css" />
-        <script src="js/jquery.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         <script src="js/uikit.min.js"></script>
-        <script src="js/core/offcanvas.min.js"></script>
+        <script src="js/uikit-icons.min.js"></script>
     </head>
-    <body style="min-width: 700px; min-height 700px;">
-        <div class="uk-grid uk-container-center">
-            <div class="uk-width-1-1 uk-text-center">
-                <div class="uk-panel uk-panel-box">
-                    <p class="uk-panel-title uk-heading-large">Kirin Patel</p>
-                </div>
-            </div>
-            
-            <div class="uk-width-1-3"></div>
-            <div class="uk-width-1-3">
-                <div class="uk-panel uk-panel-box uk-animation-scale-up">
-                    <div class="uk-width-1-3" style="float: left">
-                        <h3 class="uk-text-center"><a href="#contact" data-uk-offcanvas><i class="uk-icon-commenting uk-text-muted"></i></a></h3>
-                    </div>
-                    <div class="uk-width-1-3" style="float: left">
-                        <h3 class="uk-text-center"><a href="#bio" data-uk-offcanvas><span><i class="uk-icon-male uk-text-muted"></i></span></a></h3>
-                    </div>
-                    <div class="uk-width-1-3" style="float: left">
-                    <h3 class="uk-text-center"><a href="#connections" data-uk-offcanvas><i class="uk-icon-link uk-text-muted"></i></a></h3> 
+    <body>
+        <div id="mobile-page" class="uk-hidden@m">
+            <section id="mobile-home">
+                <div id="bio" class="uk-flex uk-flex-center">
+                    <img id="profile-picture" src="images/profile_picture.JPG" />
+                    <div class="uk-card uk-card-default uk-card-body uk-background-muted">
+                        <p class="uk-text-lead"><a href="#contact" uk-scroll>Kirin Patel</a></p>
+                        <p class="uk-text-meta"><a href="#projects-mobile" uk-scroll>mobile</a>, <a href="#projects-web" uk-scroll>web</a>, and <a href="#projects-desktop" uk-scroll>desktop</a> <b class="uk-text-bold">developer</b></p>
                     </div>
                 </div>
-            </div>
-            <div class="uk-width-1-3"></div>
-            
-            <div class="uk-width-1-3">
-                <div class="uk-panel uk-panel-box uk-animation-scale-up">
-                    <a href="#web-development" data-uk-offcanvas><img src="images/Browser.svg" style="height: 15em;" /></a>
+                <div class="uk-flex uk-flex-center">
+                    <a href="#projects" uk-icon="icon: arrow-down; ratio: 2.5" uk-scroll></a>
                 </div>
-            </div>
-            <div class="uk-width-1-3">
-                <div class="uk-panel uk-panel-box uk-animation-scale-up">
-                    <a href="#mobile-development" data-uk-offcanvas><img src="images/iPhone.svg" style="height: 15em;" /></a>
-                </div>
-            </div>
-            <div class="uk-width-1-3">
-                <div class="uk-panel uk-panel-box uk-animation-scale-up">
-                    <a href="#desktop-development" data-uk-offcanvas><img src="images/Desktop.svg" style="height: 15em;" /></a>
+            </section>
+            <div id="to-top">
+                <div class="uk-flex uk-flex-right" style="position: absolute; z-index: 1; width: 100%; height: 2.5em; background: white;"></div>
+                <div class="uk-flex uk-flex-right" uk-sticky="animation: uk-animation-fade; show-on-up: true">
+                    <a href="#mobile-home" style="margin-right: -.5em;" uk-icon="icon: arrow-up; ratio: 2.5" uk-scroll></a>
                 </div>
             </div>
         </div>
-        
-        <div class="uk-offcanvas" id="web-development">
-            <div class="uk-offcanvas-bar">
-                <div class="uk-panel">
-                    <h1 class="uk-text-bold uk-text-contrast uk-text-right">Web Development</h1>
-                    <h3 class="uk-text-muted uk-text-contrast uk-text-right">Projects</h3>
-                    <div>
-                        <p class="uk-text-muted uk-text-right"><a href="portfolio/1">DeManss' History Hub</a></p>
-                        <p class="uk-text-small uk-text-contrast uk-text-right">Client: Christopher DeManss<br>Date: August 2014 - April 2015<br><br>Mr. DeManss' History Hub serves to provide students in his classes with information and links to any class material that will aid them in their studies. The premise of the project was for my IB ITGS project. He is currently in the process of finding hosting for full use in the 2016-2017 school year.</p>
-                    </div>
-                    <div>
-                        <p class="uk-text-muted uk-text-right"><a href="dssr">Dossier</a></p>
-                        <p class="uk-text-small uk-text-contrast uk-text-right">Client: Elijah Cutler<br>Date: December 2015 - April 2016<br><br>Dossier was designed to provide Elijah with an easy to use Modal system built upon Bootstrap. Dossier aims to provide exposure to Elijah's and other clothing brands in the streetwear world.</p>
-                    </div>
-                    <div>
-                        <p class="uk-text-muted uk-text-right"><a href="http://lfc.kirinpatel.com">Lindrose Family Cookbook</a></p>
-                        <p class="uk-text-small uk-text-contrast uk-text-right">Client: Lindrose Family<br>Date: April 2016<br><br>Lindrose Family Cookbook is an all in one place for the Lindrose Family to access all of their recipes on the go. With Firebase integration, this Cookbook is the easiest way to store and access their recipes.</p>
-                    </div>
-                    <div>
-                        <p class="uk-text-muted uk-text-right"><a href="http://www.cryfelt.com">CryFelt</a></p>
-                        <p class="uk-text-small uk-text-contrast uk-text-right">Client: Jaedyn Beltran<br>Date: November 2016<br><br>Jaedyn's personal website was designed around his pictures and music. Allowing for his creativity to be on display for anyone to see.</p>
+        <div id="desktop-page" class="uk-visible@m">
+            <div uk-sticky>
+                <header id="header">
+                    <nav class="uk-navbar-container uk-navbar-default" uk-navbar="mode: click">
+                        <div class="uk-navbar-left">
+                            <ul class="uk-navbar-nav">
+                                <li><a href="#desktop-home" uk-scroll>Home</a></li>
+                                <li><a>Projects</a>
+                                    <div class="uk-navbar-dropdown">
+                                        <ul class="uk-nav uk-navbar-dropdown-nav">
+                                            <li><a href="#projects-mobile" uk-scroll>Mobile</a></li>
+                                            <li><a href="#projects-web" uk-scroll>Web</a></li>
+                                            <li><a href="#projects-desktop" uk-scroll>Desktop</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li><a href="#contact" uk-scroll>Contact</a></li>
+                                <!--<li><a href="#about" uk-scroll>About Me</a></li>-->
+                            </ul>
+                        </div>
+                    </nav>
+                </header>
+            </div>
+            <section id="desktop-home">
+                <div id="bio" class="uk-flex uk-flex-center">
+                    <img id="profile-picture" src="images/profile_picture.JPG" />
+                    <div class="uk-card uk-card-default uk-card-body uk-background-muted">
+                        <p class="uk-text-lead"><a href="#about" uk-scroll>Kirin Patel</a></p>
+                        <p class="uk-text-meta"><a href="#projects-mobile" uk-scroll>mobile</a>, <a href="#projects-web" uk-scroll>web</a>, and <a href="#projects-desktop" uk-scroll>desktop</a> <b class="uk-text-bold">developer</b></p>
                     </div>
                 </div>
-            </div>
+            </section>
         </div>
-        
-        <div class="uk-offcanvas" id="mobile-development">
-            <div class="uk-offcanvas-bar">
-                <div class="uk-panel">
-                    <h1 class="uk-text-bold uk-text-contrast uk-text-right">Mobile Development</h1>
-                    <h3 class="uk-text-muted uk-text-contrast uk-text-right">Projects</h3>
-                    <div>
-                        <p class="uk-text-muted uk-text-right"><a href="http://www.trndstar.com">TrndStar</a></p>
-                        <p class="uk-text-small uk-text-contrast uk-text-right">Client: OVER Media INC. / TrndStar<br>Date: November 2015 - Present<br><br>TrndStar aims to bring new features to the social media environment. Currently, with no good environment for new upcoming artists to make a name for themselves, TrndStar plans to put these upcomers right in the middle of the action. Users can gain a following by uploading videos, competing, and collaborating. TrndStar features the ability to upload 90 second videos and gain exposure as a new artist or entertainer. Users can challenge one another and have their videos seen by both users followers. While multiple users can collaborate and create one video to attract as many followers as possible.</p>
+        <div>
+            <section id="projects" class="uk-section uk-section-muted">
+                <div class="uk-container">
+                    <h1 id="projects-mobile" style="padding-top: 10vh;">Mobile Projects</h1>
+                    <div id="project">
+                        <div class="uk-card uk-card-default">
+                            <div class="uk-card-header">
+                                <h3 class="uk-card-title"><a href="http://www.trndstar.com" target="_blank">TrndStar</a></h3>
+                            </div>
+                            <div class="uk-card-body">
+                                <p>TrndStar aims to bring new features to the social media environment. Currently, there is not a good environment for new upcoming artists to make a name for themselves. TrndStar plans to put these upcomers right in the middle of the action.<br><br>Users can gain a following by uploading videos, competing, and collaborating. Users can challenge other users and have their videos seen by both users followers. Multiple users can collaborate and create one video to attract as many followers as possible.<br><br>TrndStar features the ability to upload 90 second videos and gain exposure as a new artist or entertainer.</p>
+                            </div>
+                            <div class="uk-card-footer">
+                                <p>Development on this project started November of 2015, I still work on this project.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="project">
+                        <div class="uk-card uk-card-default">
+                            <div class="uk-card-header">
+                                <h3 class="uk-card-title"><a href="https://github.com/ajchili/food-tracker-swift" target="_blank">iOS Food Tracker</a><span class="uk-badge" style="float:right;">New</span></h3>
+                            </div>
+                            <div class="uk-card-body">
+                                <p>This app was my introduction to iOS development and was centered around <a href="https://developer.apple.com/library/content/referencelibrary/GettingStarted/DevelopiOSAppsSwift/index.html#//apple_ref/doc/uid/TP40015214-CH2-SW1" target="_blank">this</a> tutorial from apple.<br><br>This app shows a list of meals, including a meal name, rating, and photo. A user can add, remove, or edit a meal. To add a new meal or edit an existing one, users navigate to a different screen where they can specify a name, rating, and photo for a particular meal.</p>
+                            </div>
+                            <div class="uk-card-footer">
+                                <p>Development on this project started January of 2017 and was completed March 2017.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        
-        <div class="uk-offcanvas" id="desktop-development">
-            <div class="uk-offcanvas-bar">
-                <div class="uk-panel">
-                    <h1 class="uk-text-bold uk-text-contrast uk-text-right">Desktop Development</h1>
-                    <h3 class="uk-text-muted uk-text-contrast uk-text-right">Projects</h3>
-                    <div>
-                        <p class="uk-text-muted uk-text-right"><a href="https://github.com/ajchili/ap_comp_sci">AP Computer Science Portfolio</a></p>
-                        <p class="uk-text-small uk-text-contrast uk-text-right">Code from my AP Computer Science class.<br>Date: August 2015 - May 2016<br><br>All the code (Java) I have made throughout the journey of AP Computer Science.</p>
+                <div class="uk-container">
+                    <h1 id="projects-web" style="padding-top: 10vh;">Web Projects</h1>
+                    <div id="project">
+                        <div class="uk-card uk-card-default">
+                            <div class="uk-card-header">
+                                <h3 class="uk-card-title"><a href="http://www.kirinpatel.com/portfolio/1" target="_blank">Mr. Demanss History Hub</a></h3>
+                            </div>
+                            <div class="uk-card-body">
+                                <p>Mr. DeManss' History Hub serves to provide students in his classes with information and links to any class material that will aid them in their studies.<br><br>The premise of the project was for my IB ITGS project.</p>
+                            </div>
+                            <div class="uk-card-footer">
+                                <p>Development on this project started August of 2014 and was finished April 2015.</p>
+                            </div>
+                        </div>
                     </div>
-                    <div>
-                        <p class="uk-text-muted uk-text-right"><a href="https://github.com/ajchili/cs_100">CS 100 Portfolio</a></p>
-                        <p class="uk-text-small uk-text-contrast uk-text-right">All the code I have made throughout the journey of CS 100.<br>Date: September 2016 - December 2016<br><br>The repository serves more as a proof of concept for programs rather than full feature methods.</p>
+                    <div id="project">
+                        <div class="uk-card uk-card-default">
+                            <div class="uk-card-header">
+                                <h3 class="uk-card-title"><a href="http://www.kirinpatel.com/dssr" target="_blank">Dossier</a></h3>
+                            </div>
+                            <div class="uk-card-body">
+                                <p>Dossier was designed to provide Elijah with an easy to use Modal system built upon Bootstrap. Dossier aims to provide exposure to Elijah's and other clothing brands in the streetwear world.</p>
+                            </div>
+                            <div class="uk-card-footer">
+                                <p>Development on this project started December of 2015 and was finished April 2016.</p>
+                            </div>
+                        </div>
                     </div>
-                    <div>
-                        <p class="uk-text-muted uk-text-right"><a href="https://github.com/ajchili/traffic_simulator">Traffic Simulator</a></p>
-                        <p class="uk-text-small uk-text-contrast uk-text-right">A Java based application that is meant to give predictions in terms of traffic and the time it takes to get somewhere.<br>Date: September 2016 - Present<br><br>The application is based upon <a href="http://www.mindprod.com/project/trafficsimulator">this</a> website. Currently development will be towards a base project rather than a fully implementable and scalable system such as the ones found in Apple Maps or Google Maps.</p>
+                    <div id="project">
+                        <div class="uk-card uk-card-default">
+                            <div class="uk-card-header">
+                                <h3 class="uk-card-title"><a href="https://ajchili.github.io/lfc/" target="_blank">Lindrose Family Cookbook</a></h3>
+                            </div>
+                            <div class="uk-card-body">
+                                <p>Lindrose Family Cookbook is an all in one place for the Lindrose Family to access all of their recipes on the go. With Firebase integration, this Cookbook is the easiest way to store and access their recipes.</p>
+                            </div>
+                            <div class="uk-card-footer">
+                                <p>Development on this project was completed during April 2016.</p>
+                            </div>
+                        </div>
                     </div>
-                    <div>
-                        <p class="uk-text-muted uk-text-right"><a href="https://github.com/ajchili/cs_225">CS 225 Portfolio</a></p>
-                        <p class="uk-text-small uk-text-contrast uk-text-right">All the code I have made throughout the journey of CS 225.<br>Date: January 2017 - May 2017<br><br>The repository contains progams made pertaining to the Intro to Java book.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="uk-offcanvas" id="contact">
-            <div class="uk-offcanvas-bar uk-offcanvas-bar-flip">
-                <div class="uk-panel">
-                    <h1 class="uk-text-bold uk-text-contrast uk-text-left">Contact Me</h1>
-                    <h3 class="uk-text-muted uk-text-contrast uk-text-left">Send an email to <span class="uk-text-success">kirinpatel@gmail.com</span> with any inquiries you may have.</h3>
-                </div>
-            </div>
-        </div>
-        
-        <div class="uk-offcanvas" id="bio">
-            <div class="uk-offcanvas-bar uk-offcanvas-bar-flip">
-                <div class="uk-panel">
-                    <h1 class="uk-text-bold uk-text-contrast uk-text-left">About Me</h1>
-                    <h3 class="uk-text-muted uk-text-contrast uk-text-left">I'm a 18 year old developer and graphics designer based out of my bedroom. Starting with Java, I have dipped my feet into many other languages and am currently focused on Java, C++, Android based Java, and HTML. With a passion for programming and a new found love for graphics design, I am aiming to get a Ph. D. in Computer Science. My passion is my career.<br><br>From a small website to a full featured app, a small logo or a huge banner, I'm down to look at any project you can imagine. No project is too big and no project is too small. Send me an email and I will get back to you as fast as I can.</h3>
-                </div>
-            </div>
-        </div>
-        
-        <div class="uk-offcanvas" id="connections">
-            <div class="uk-offcanvas-bar uk-offcanvas-bar-flip">
-                <div class="uk-panel">
-                    <h1 class="uk-text-bold uk-text-contrast uk-text-left">Links</h1>
-                    <div class="uk-grid">
-                        <span class="uk-width-1-3"><a href="https://github.com/ajchili"><i class="uk-icon-github uk-contrast"></i></a></span>
-                        <span class="uk-width-1-3"><a href="https://www.linkedin.com/in/kirin-patel-aab1a3128"><i class="uk-icon-linkedin uk-contrast"></i></a></span>
-                        <span class="uk-width-1-3"><a href="http://steamcommunity.com/id/Ajchili"><i class="uk-icon-steam uk-contrast"></i></a></span>
-                        <div class="uk-width-1-1" style="padding-top: 1em;"></div>
-                        <span class="uk-width-1-3"><a href="https://plus.google.com/u/1/115427457443030329858/posts"><i class="uk-icon-google-plus uk-contrast"></i></a></span>
-                        <span class="uk-width-1-3"><a href="http://music.kirinpatel.com"><i class="uk-icon-soundcloud uk-contrast"></i></a></span>
-                        <span class="uk-width-1-3"><a href="http://pics.kirinpatel.com"><i class="uk-icon-tumblr uk-contrast"></i></a></span>
+                    <div id="project">
+                        <div class="uk-card uk-card-default">
+                            <div class="uk-card-header">
+                                <h3 class="uk-card-title"><a href="https://ajchili.github.io/cryfelt/" target="_blank">CryFelt</a></h3>
+                            </div>
+                            <div class="uk-card-body">
+                                <p>Jaedyn's personal website was designed around his pictures and music. Allowing for his creativity to be on display for anyone to see.</p>
+                            </div>
+                            <div class="uk-card-footer">
+                                <p>Development on this project was completed during November 2016.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
+                <div class="uk-container">
+                    <h1 id="projects-desktop" style="padding-top: 10vh;">Desktop Projects</h1>
+                    <div id="project">
+                        <div class="uk-card uk-card-default">
+                            <div class="uk-card-header">
+                                <h3 class="uk-card-title"><a href="https://github.com/ajchili/ap_comp_sci" target="_blank">AP Computer Science Portfolio</a></h3>
+                            </div>
+                            <div class="uk-card-body">
+                                <p>All the code (Java) I have made throughout the journey of AP Computer Science.</p>
+                            </div>
+                            <div class="uk-card-footer">
+                                <p>My AP Computer Science Portfolio was built from August 2015 to March 2016.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="project">
+                        <div class="uk-card uk-card-default">
+                            <div class="uk-card-header">
+                                <h3 class="uk-card-title"><a href="https://github.com/ajchili/ap_comp_sci" target="_blank">CS 100 Portfolio</a></h3>
+                            </div>
+                            <div class="uk-card-body">
+                                <p>All the code I have made throughout the journey of CS 100.</p>
+                            </div>
+                            <div class="uk-card-footer">
+                                <p>My CS 100 Portfolio was built from September 2016 to December 2016.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="project">
+                        <div class="uk-card uk-card-default">
+                            <div class="uk-card-header">
+                                <h3 class="uk-card-title"><a href="https://github.com/ajchili/ap_comp_sci" target="_blank">Traffic Simulator</a></h3>
+                            </div>
+                            <div class="uk-card-body">
+                                <p>The application is based upon <a href="http://www.mindprod.com/project/trafficsimulator" target="_blank">this</a> website. Currently development will be towards a base project rather than a fully implementable and scalable system such as the ones found in Apple Maps or Google Maps.</p>
+                            </div>
+                            <div class="uk-card-footer">
+                                <p>Traffic Simulator was created September 2016 and is still in development.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="project">
+                        <div class="uk-card uk-card-default">
+                            <div class="uk-card-header">
+                                <h3 class="uk-card-title"><a href="https://github.com/ajchili/ap_comp_sci" target="_blank">CS 225 Portfolio</a></h3>
+                            </div>
+                            <div class="uk-card-body">
+                                <p>All the code (Java) I have made throughout the journey of CS 225.</p>
+                            </div>
+                            <div class="uk-card-footer">
+                                <p>My CS 100 Portfolio was built from January 2017 to May 2017.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="project">
+                        <div class="uk-card uk-card-default">
+                            <div class="uk-card-header">
+                                <h3 class="uk-card-title"><a href="https://ajchili.github.io/feature-extraction/" target="_blank">Feature Extraction</a><span class="uk-badge" style="float:right;">New</span></h3>
+                            </div>
+                            <div class="uk-card-body">
+                                <p>This projects is a set of smaller projects that revolve around feature extraction. Being Java based, this project is aimed at creating GUI based applications that provide a simple feature extraction experience.</p>
+                            </div>
+                            <div class="uk-card-footer">
+                                <p>Development started in February of 2017 and is ongoing.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="project">
+                        <div class="uk-card uk-card-default">
+                            <div class="uk-card-header">
+                                <h3 class="uk-card-title"><a href="https://github.com/ajchili/astar-pathfinding-java" target="_blank">A* Pathfinding Algorithm</a><span class="uk-badge" style="float:right;">New</span></h3>
+                            </div>
+                            <div class="uk-card-body">
+                                <p>An A* pathfinding algorithm in java.</p>
+                            </div>
+                            <div class="uk-card-footer">
+                                <p>A* Pathfinding Algorithm was created Febuary 2017 and is still in development.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="project">
+                        <div class="uk-card uk-card-default">
+                            <div class="uk-card-header">
+                                <h3 class="uk-card-title"><a href="https://ajchili.github.io/dailyprogrammer-challenges" target="_blank">r/dailyprogrammer challenges</a><span class="uk-badge" style="float:right;">New</span></h3>
+                            </div>
+                            <div class="uk-card-body">
+                                <p>Dailyprogrammer is about challenging programmers of all skill level with weekly programming challenges. 3 challenges a week are posted at increasing difficulty. Solutions are peer reviewed and redditors can ask for the community for feedback and comments.<br><br>I set out to complete these challenges using many different languages in order to expand my knowledge<br><br>You can find more information about this on their reddit wiki page <a href="https://www.reddit.com/r/dailyprogrammer/wiki/index" target="_blank">r/dailyprogrammer</a>.</p>
+                            </div>
+                            <div class="uk-card-footer">
+                                <p>I started working on Dailyprogrammer challenges March of 2017.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="contact" class="uk-section-muted">
+                <div class="uk-section uk-section-muted">
+                    <div class="uk-container uk-text-center">
+                        <div>
+                            <h1>Links</h1>
+                            <div class="uk-flex uk-flex-center">
+                                <a href="https://www.github.com/ajchili" target="_blank" uk-icon="icon: github; ratio: 2" style="margin-right: 1em;"></a>
+                                <a href="https://www.linkedin.com/in/kirin-patel-aab1a3128" target="_blank" uk-icon="icon: linkedin; ratio: 2" style="margin-right: 1em;"></a>
+                                <a href="https://www.facebook.com/kirin.patel.3" target="_blank" uk-icon="icon: facebook; ratio: 2" style="margin-right: 1em;"></a>
+                                <a href="https://plus.google.com/u/1/115427457443030329858" target="_blank" uk-icon="icon: google-plus; ratio: 2"></a>
+                            </div>
+                        </div>
+                        <div style="margin-top: 5em;">
+                            <h1>Contact</h1>
+                            <p>The best way to contact me is to email me <a href="mailto:kirinpatel@gmail.com">here</a>.</p>
+                        </div>
+                        <div style="margin-top: 5em;">
+                            <h1>Questions</h1>
+                            <div style="margin-top: 2em;">
+                                <h3>Can you make me an app/website/desktop app?</h3>
+                                <p>Of course! I am egar to take on new projects and motivated to get you the product you dream of. Get in contact with me through email or any of the links above to get started.</p>
+                            </div>
+                            <div style="margin-top: 2em;">
+                                <h3>Do I have to pay?</h3>
+                                <p>Unfortunetly, I have to charge for my work. However, I won't take all of your money.</p>
+                                <table class="uk-table">
+                                    <thead>
+                                        <tr>
+                                            <th class="uk-text-center">Mobile</th>
+                                            <th class="uk-text-center">Web</th>
+                                            <th class="uk-text-center">Desktop</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Android: <b class="uk-text-bold">$20</b> per hour</td>
+                                            <td>Websites: <b class="uk-text-bold">$10</b> per hour</td>
+                                            <td>Java apps: <b class="uk-text-bold">$20</b> per hour</td>
+                                        </tr>
+                                        <tr>
+                                            <td>iOS: <b class="uk-text-bold">$5</b> per hour</td>
+                                            <td>Web apps: <b class="uk-text-bold">$5</b> per hour</td>
+                                            <td>Other language apps: <b class="uk-text-bold">$5-10</b> per hour</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div style="margin-top: 2em;">
+                                <h3>Why do you charge different prices per language/platform?</h3>
+                                <p>Pricing is based on my knowledge of a language/platform. The less I know, the less I charge. You shouldn't have to pay for my time spent learning how to make your dream.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
+        <!--<div class="uk-visible@m">
+            <section id="about" class="uk-section-muted">
+                <div class="uk-section">
+                    <div class="uk-container">
+                    </div>
+                </div>
+            </section>
+        </div>-->
     </body>
 </html>
