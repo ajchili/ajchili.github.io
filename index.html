@@ -15,7 +15,7 @@
             }
         </style>
     </head>
-    <body>
+    <body onload="$('#project-selection').dropdown();">
         <div>
             <div id="header" class="ui secondary menu">
                 <div id="project-selection" class="ui dropdown item">Projects <i class="dropdown icon"></i>
@@ -66,11 +66,5 @@
                 <p style="text-align: center;">These links, such as <a href="https://www.github.com/ajchili" target="_blank">Github</a>, <a href="https://www.facebook.com/kirin.patel.3" target="_blank">Facebook</a>, and <a href="https://www.linkedin.com/in/kirin-patel-aab1a3128" target="_blank">LinkedIn</a> can be found under my profile.</p>
             </div>
         </div>
-        
-        <script>
-            $(document).ready(function(){
-                $('#project-selection').dropdown();
-            });
-        </script>
     </body>
 </html>
