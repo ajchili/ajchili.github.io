@@ -10,6 +10,10 @@
         <script src="github-calendar.min.js"></script>
         
         <style>
+            body {
+                height 100%;
+            }
+            
             iframe {
                 margin: 0 auto;
                 display: block;
@@ -28,8 +32,8 @@
                 <div id="project-selection" class="ui dropdown item">Projects <i class="dropdown icon"></i>
                     <div class="menu">
                     <a class="item" onclick="$('#projects-web').modal('show');">Web</a>
-                    <a href="#projects-mobile" class="item">Mobile</a>
-                    <a href="#projects-desktop" class="item">Desktop</a>
+                    <a class="item" onclick="$('#projects-mobile').modal('show');">Mobile</a>
+                    <a class="item" onclick="$('#projects-desktop').modal('show');">Desktop</a>
                     </div>
                 </div>
                 <a class="item" onclick="$('#contact').modal('show');">Contact Me</a>
@@ -40,7 +44,7 @@
                     </div>
                 </div>
             </div>
-            <div id="home">
+            <div>
                 <div class="ui centered card">
                     <div class="image">
                         <img src="/images/profile_picture.JPG">
@@ -66,7 +70,7 @@
         </div>
         
         <div id="projects-web" class="ui basic modal">
-            <div class="ui stackable three column grid">
+            <div class="ui stackable two column grid">
                 <div class="column">
                     <div class="ui centered card">
                         <div class="content">
@@ -107,6 +111,71 @@
                             <div class="meta">Commissioned Project</div>
                             <div class="description">
                                 Jaedyn's (another close friend) personal website was designed around his pictures and music. Allowing for his creativity to be on display for anyone to see.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="projects-mobile" class="ui basic modal">
+            <div class="ui stackable two column grid">
+                <div class="column">
+                    <div class="ui centered card">
+                        <div class="content">
+                            <div class="header"><a href="http://www.trndstar.com/" target="_blank">TrndStar</a></div>
+                            <div class="meta">Commissioned Project</div>
+                            <div class="description">
+                                "TrndStar aims to bring new features to the social media environment. Currently, there is not a good environment for new upcoming artists to make a name for themselves. TrndStar plans to put these upcomers right in the middle of the action.<br>Users can gain a following by uploading videos, competing, and collaborating. Users can challenge other users and have their videos seen by both users followers. Multiple users can collaborate and create one video to attract as many followers as possible.<br>TrndStar features the ability to upload 90 second videos and gain exposure as a new artist or entertainer."<br>- Official TrndStar statement
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="ui centered card">
+                        <div class="content">
+                            <div class="header"><a href="https://github.com/ajchili/food-tracker-swift" target="_blank">iOS Food Tracker</a></div>
+                            <div class="meta">Hobby Project</div>
+                            <div class="description">
+                                This app was my introduction to iOS development and was centered around <a href="https://developer.apple.com/library/content/referencelibrary/GettingStarted/DevelopiOSAppsSwift/index.html#//apple_ref/doc/uid/TP40015214-CH2-SW1" target="_blank">this</a> tutorial from apple. This app shows a list of meals, including a meal name, rating, and photo. A user can add, remove, or edit a meal. To add a new meal or edit an existing one, users navigate to a different screen where they can specify a name, rating, and photo for a particular meal.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div id="projects-desktop" class="ui basic modal">
+            <div class="ui stackable two column grid">
+                <div class="column">
+                    <div class="ui centered card">
+                        <div class="content">
+                            <div class="header"><a href="https://ajchili.github.io/dailyprogrammer-challenges" target="_blank">r/dailyprogrammer challenges</a></div>
+                            <div class="meta">Hobby Project</div>
+                            <div class="description">
+                                Dailyprogrammer is about challenging programmers of all skill level with weekly programming challenges. There are 3 challenges a week that are posted at increasing difficulty. Solutions are peer reviewed and redditors can ask the community for feedback and comments. I set out to complete these challenges using many different languages in order to expand my knowledge. You can find more information about this on their reddit <a href="https://www.reddit.com/r/dailyprogrammer/wiki/index" target="_blank">wiki page</a>.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="ui centered card">
+                        <div class="content">
+                            <div class="header"><a href="https://github.com/ajchili/coursework" target="_blank">Coursework</a></div>
+                            <div class="meta">School Projects</div>
+                            <div class="description">
+                                This repository encompasses all of the coursework I have completed throughout my highschool and college education. Rather than having multiple links on my website for the specific classes that I have taken, this provides a hub to display it all.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="ui centered card">
+                        <div class="content">
+                            <div class="header"><a href="https://github.com/ajchili/bglf" target="_blank">BattleGroundsLootFaster</a></div>
+                            <div class="meta">Hobby Project</div>
+                            <div class="description">
+                                bglf or BattleGroundsLootFaster is a simple <a href="https://autohotkey.com/" target="_blank">AutoHotkey</a> script that aides a user in picking up loot faster in PlayerUnknown's BattleGounds. More information about the script and its usage can be found in the Github repository.
                             </div>
                         </div>
                     </div>
