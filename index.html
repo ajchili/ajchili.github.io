@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Kirin Patel</title>
+
+        <link rel="stylesheet" href="semantic.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="semantic.js"></script>
+        
+        <style>
+            #header {
+                padding-top: 1em;
+                margin-left: 2em;
+                margin-right: 2em;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <div id="header" class="ui secondary menu">
+                <a href="#home" class="item">Home</a>
+                <div id="project-selection" class="ui dropdown item">Projects <i class="dropdown icon"></i>
+                    <div class="menu">
+                    <a href="#projects-web" class="item">Web</a>
+                    <a href="#projects-mobile" class="item">Mobile</a>
+                    <a href="#projects-desktop" class="item">Desktop</a>
+                    </div>
+                </div>
+                <a class="item" onclick="$('#contact').modal('show');">Contact Me</a>
+            </div>
+            <div id="home">
+                <div class="ui centered card">
+                    <div class="image">
+                        <img src="/images/profile_picture.JPG">
+                    </div>
+                        <div class="content">
+                        <a class="header">Kirin Patel</a>
+                        <div class="meta">
+                            <span class="date">Software Developer</span>
+                        </div>
+                        <div class="description">
+                            I develop apps for fun and love to work on projects for others.
+                        </div>
+                    </div>
+                    <div class="extra content">
+                        <div class="ui center aligned container">
+                            <a href="https://www.github.com/ajchili" target="_blank"><i class="github icon"></i></a>
+                            <a href="https://www.facebook.com/kirin.patel.3" target="_blank"><i class="facebook icon"></i></a>
+                            <a href="https://www.linkedin.com/in/kirin-patel-aab1a3128" target="_blank"><i class="linkedin icon"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        <div id="contact" class="ui basic modal">
+            <div class="ui icon header">
+                Send me an email
+            </div>
+            <div class="center content">
+                <p style="text-align: center;">Please contact me at <a href="mailto:kirinpatel@gmail.com">kirinpatel@gmail.com</a> for any inqueries you may have.</p>
+            </div>
+            <div class="ui icon header">
+                or get in contact through social media
+            </div>
+            <div class="center content">
+                <p style="text-align: center;">These links, such as <a href="https://www.github.com/ajchili" target="_blank">Github</a>, <a href="https://www.facebook.com/kirin.patel.3" target="_blank">Facebook</a>, and <a href="https://www.linkedin.com/in/kirin-patel-aab1a3128" target="_blank">LinkedIn</a> can be found under my profile.</p>
+            </div>
+        </div>
+        
+        <script>
+            $(document).ready(function(){
+                $('#project-selection').dropdown();
+            });
+        </script>
+    </body>
+</html>
