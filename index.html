@@ -2,6 +2,8 @@
 <html>
     <head>
         <title>Kirin Patel</title>
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
         <link rel="stylesheet" href="semantic.css" />
         <link rel="stylesheet" href="https://cdn.rawgit.com/IonicaBizau/github-calendar/gh-pages/dist/github-calendar.css"/>
@@ -19,6 +21,10 @@
                 display: block;
             }
             
+            #blank {
+                height 0;
+            }
+            
             #header-card {
                 border: none;
                 border-radius: 0em;
@@ -28,13 +34,18 @@
             #header {
                 padding-top: 1em;
             }
+            
+            .calendar {
+                background: #FFFFFF;
+                color: rgba(0, 0, 0, 0.85);
+            }
         </style>
     </head>
     <body onload="$('#project-selection').dropdown(); $('#link-selection').dropdown();">
         <!-- Body of website -->
         <div>
-            <div class="ui three column grid">
-                <div class="column">
+            <div class="ui stackable three column grid">
+                <div id="blank" class="column">
                 </div>
                 <div class="column">
                     <div id="header-card" class="ui centered card">
@@ -50,42 +61,34 @@
                             <div id="link-selection" class="ui dropdown item">Links <i class="dropdown icon"></i>
                                 <div class="menu">
                                 <a onclick="$('#discord').modal('show');" class="item">Discord</a>
-                                <a onclick="GitHubCalendar('.calendar', 'ajchili\\'); $('#github-commits').modal('show');" class="item">Github commits</a>
+                                <a onclick="GitHubCalendar('.calendar', 'ajchili'); $('#github-commits').modal('show');" class="item">Github commits</a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="column">
-                </div>
-                <div class="column">
-                </div>
-                <div class="column">
-                    <div id="header" class="ui center aligned secondary menu">
-                        <div class="ui centered card">
-                            <div class="image">
-                                <img src="images/profile_picture.JPG">
+                    <div class="ui centered card">
+                        <div class="image">
+                            <img src="images/profile_picture.JPG">
+                        </div>
+                            <div class="content">
+                            <a class="header">Kirin Patel</a>
+                            <div class="meta">
+                                <span class="date">Software Developer</span>
                             </div>
-                                <div class="content">
-                                <a class="header">Kirin Patel</a>
-                                <div class="meta">
-                                    <span class="date">Software Developer</span>
-                                </div>
-                                <div class="description">
-                                    I develop apps for fun and love to work on projects with others.
-                                </div>
+                            <div class="description">
+                                I develop apps for fun and love to work on projects with others.
                             </div>
-                            <div class="extra content">
-                                <div class="ui center aligned container">
-                                    <a href="https://www.github.com/ajchili" target="_blank"><i class="github icon"></i></a>
-                                    <a href="https://www.facebook.com/kirin.patel.3" target="_blank"><i class="facebook icon"></i></a>
-                                    <a href="https://www.linkedin.com/in/kirin-patel-aab1a3128" target="_blank"><i class="linkedin icon"></i></a>
-                                </div>
+                        </div>
+                        <div class="extra content">
+                            <div class="ui center aligned container">
+                                <a href="https://www.github.com/ajchili" target="_blank"><i class="github icon"></i></a>
+                                <a href="https://www.facebook.com/kirin.patel.3" target="_blank"><i class="facebook icon"></i></a>
+                                <a href="https://www.linkedin.com/in/kirin-patel-aab1a3128" target="_blank"><i class="linkedin icon"></i></a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="column">
+                <div id="blank" class="column">
                 </div>
             </div>
         </div>
@@ -216,7 +219,7 @@
                 or get in contact through social media
             </div>
             <div class="center content">
-                <p style="text-align: center;">These links, such as <a href="https://www.github.com/ajchili" target="_blank">Github</a>, <a href="https://www.facebook.com/kirin.patel.3" target="_blank">Facebook</a>, and <a href="https://www.linkedin.com/in/kirin-patel-aab1a3128" target="_blank">LinkedIn</a> can be found under my profile.</p>
+                <p style="text-align: center;">These links, such as <a href="https://www.github.com/ajchili" target="_blank">Github</a>, <a href="https://www.facebook.com/kirin.patel.3" target="_blank">Facebook</a>, and <a href="https://www.linkedin.com/in/kirin-patel-aab1a3128" target="_blank">LinkedIn</a>, can all be found under my profile.</p>
             </div>
         </div>
         
@@ -224,7 +227,7 @@
             <iframe src="https://discordapp.com/widget?id=308698715147730944&theme=light" width="350" height="500" allowtransparency="true" frameborder="0"></iframe>
         </div>
         
-        <div id="github-commits" class="ui modal">
+        <div id="github-commits" class="ui basic modal">
             <div class="calendar">
                 <div class="ui active dimmer">
                     <div class="ui loader"></div>
