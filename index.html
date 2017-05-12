@@ -2,297 +2,265 @@
 <html>
     <head>
         <title>Kirin Patel</title>
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        <link rel="stylesheet" href="css/kirinpatel.css" />
-        <link rel="stylesheet" href="css/uikit.min.css" />
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-        <script src="js/uikit.min.js"></script>
-        <script src="js/uikit-icons.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.css" />
+        <link rel="stylesheet" href="https://cdn.rawgit.com/IonicaBizau/github-calendar/gh-pages/dist/github-calendar.css"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.js"></script>
+        <script src="github-calendar/github-calendar.min.js"></script>
+        
+        <style>
+            body {
+                height 100%;
+            }
+            
+            iframe {
+                margin: 0 auto;
+                display: block;
+            }
+            
+            #blank {
+                height 0;
+            }
+            
+            #header-card {
+                border: none;
+                border-radius: 0em;
+                box-shadow: 0px 0px 0px 0px, 0px 0px 0px 0px;
+            }
+            
+            #header {
+                padding-top: 1em;
+            }
+            
+            #cancel {
+                margin-bottom: 1em;
+                font-size: 2em;
+            }
+            
+            .calendar {
+                background: #FFFFFF;
+                color: rgba(0, 0, 0, 0.85);
+            }
+        </style>
     </head>
-    <body>
-        <div id="mobile-page" class="uk-hidden@l">
-            <section id="mobile-home">
-                <div id="bio" class="uk-flex uk-flex-center">
-                    <img id="profile-picture" src="images/profile_picture.JPG" />
-                    <div class="uk-flex uk-flex-middle">
-                        <div class="uk-card uk-card-small uk-card-default uk-card-body uk-background-muted" style="height: 130px;">
-                            <p class="uk-text-lead"><a href="#contact" uk-scroll>Kirin Patel</a></p>
-                            <p class="uk-text-meta"><a href="#projects-mobile" uk-scroll>mobile</a>, <a href="#projects-web" uk-scroll>web</a>, and <a href="#projects-desktop" uk-scroll>desktop</a> <b class="uk-text-bold">developer</b></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="uk-flex uk-flex-center">
-                    <a href="#projects" uk-icon="icon: arrow-down; ratio: 2.5" uk-scroll></a>
-                </div>
-            </section>
-            <div id="to-top">
-                <div class="uk-flex uk-flex-right" style="position: absolute; z-index: 1; width: 100%; height: 2.5em; background: white;"></div>
-                <div class="uk-flex uk-flex-right" uk-sticky="animation: uk-animation-fade; show-on-up: true">
-                    <a href="#mobile-home" style="margin-right: -.5em;" uk-icon="icon: arrow-up; ratio: 2.5" uk-scroll></a>
-                </div>
-            </div>
-        </div>
-        <div id="desktop-page" class="uk-visible@l">
-            <div uk-sticky>
-                <header id="header">
-                    <nav class="uk-navbar-container uk-navbar-default" uk-navbar="mode: click">
-                        <div class="uk-navbar-left">
-                            <ul class="uk-navbar-nav">
-                                <li><a href="#desktop-home" uk-scroll>Home</a></li>
-                                <li><a>Projects</a>
-                                    <div class="uk-navbar-dropdown">
-                                        <ul class="uk-nav uk-navbar-dropdown-nav">
-                                            <li><a href="#projects-mobile" uk-scroll>Mobile</a></li>
-                                            <li><a href="#projects-web" uk-scroll>Web</a></li>
-                                            <li><a href="#projects-desktop" uk-scroll>Desktop</a></li>
-                                        </ul>
-                                    </div>
-                                </li>
-                                <li><a href="#contact" uk-scroll>Contact</a></li>
-                            </ul>
-                        </div>
-                    </nav>
-                </header>
-            </div>
-            <section id="desktop-home">
-                <div id="bio" class="uk-flex uk-flex-center">
-                    <img id="profile-picture" src="images/profile_picture.JPG" />
-                    <div class="uk-flex uk-flex-middle">
-                        <div class="uk-card uk-card-small uk-card-default uk-card-body uk-background-muted" style="height: 130px;">
-                            <p class="uk-text-lead"><a href="#contact" uk-scroll>Kirin Patel</a></p>
-                            <p class="uk-text-meta"><a href="#projects-mobile" uk-scroll>mobile</a>, <a href="#projects-web" uk-scroll>web</a>, and <a href="#projects-desktop" uk-scroll>desktop</a> <b class="uk-text-bold">developer</b></p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </div>
+    <body onload="$('#project-selection').dropdown(); $('#link-selection').dropdown();">
+        <!-- Body of website -->
         <div>
-            <section id="projects" class="uk-section uk-section-muted">
-                <div class="uk-container">
-                    <h1 id="projects-mobile" style="padding-top: 10vh;">Mobile Projects</h1>
-                    <div id="project">
-                        <div class="uk-card uk-card-default">
-                            <div class="uk-card-header">
-                                <h3 class="uk-card-title"><a href="http://www.trndstar.com" target="_blank">TrndStar</a></h3>
+            <div class="ui stackable three column grid">
+                <div id="blank" class="column">
+                </div>
+                <div class="column">
+                    <div id="header-card" class="ui centered card">
+                        <div id="header" class="ui aligned secondary menu">
+                            <div id="project-selection" class="ui dropdown item">Projects <i class="dropdown icon"></i>
+                                <div class="menu">
+                                <a class="item" onclick="$('#projects-web').modal('show');">Web</a>
+                                <a class="item" onclick="$('#projects-mobile').modal('show');">Mobile</a>
+                                <a class="item" onclick="$('#projects-desktop').modal('show');">Desktop</a>
+                                </div>
                             </div>
-                            <div class="uk-card-body">
-                                <p>"TrndStar aims to bring new features to the social media environment. Currently, there is not a good environment for new upcoming artists to make a name for themselves. TrndStar plans to put these upcomers right in the middle of the action.<br><br>Users can gain a following by uploading videos, competing, and collaborating. Users can challenge other users and have their videos seen by both users followers. Multiple users can collaborate and create one video to attract as many followers as possible.<br><br>TrndStar features the ability to upload 90 second videos and gain exposure as a new artist or entertainer."<br>- Official TrndStar statement</p>
-                            </div>
-                            <div class="uk-card-footer">
-                                <p>Development on this project started November of 2015, I still work on this project, acting as CTO to oversee development.</p>
+                            <a class="item" onclick="$('#contact').modal('show');">Contact Me</a>
+                            <div id="link-selection" class="ui dropdown item">Links <i class="dropdown icon"></i>
+                                <div class="menu">
+                                <a onclick="$('#discord').modal('show');" class="item">Discord</a>
+                                <a onclick="GitHubCalendar('.calendar', 'ajchili'); $('#github-commits').modal('show');" class="item">Github commits</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div id="project">
-                        <div class="uk-card uk-card-default">
-                            <div class="uk-card-header">
-                                <h3 class="uk-card-title"><a href="https://github.com/ajchili/food-tracker-swift" target="_blank">iOS Food Tracker</a></h3>
+                    <div class="ui centered card">
+                        <div class="image">
+                            <img src="images/profile_picture.JPG">
+                        </div>
+                            <div class="content">
+                            <a class="header">Kirin Patel</a>
+                            <div class="meta">
+                                <span class="date">Software Developer</span>
                             </div>
-                            <div class="uk-card-body">
-                                <p>This app was my introduction to iOS development and was centered around <a href="https://developer.apple.com/library/content/referencelibrary/GettingStarted/DevelopiOSAppsSwift/index.html#//apple_ref/doc/uid/TP40015214-CH2-SW1" target="_blank">this</a> tutorial from apple.<br><br>This app shows a list of meals, including a meal name, rating, and photo. A user can add, remove, or edit a meal. To add a new meal or edit an existing one, users navigate to a different screen where they can specify a name, rating, and photo for a particular meal.</p>
+                            <div class="description">
+                                I develop apps for fun and love to work on projects with others.
                             </div>
-                            <div class="uk-card-footer">
-                                <p>Development on this project started January of 2017 and was completed March 2017.</p>
+                        </div>
+                        <div class="extra content">
+                            <div class="ui center aligned container">
+                                <a href="https://www.github.com/ajchili" target="_blank"><i class="github icon"></i></a>
+                                <a href="https://www.facebook.com/kirin.patel.3" target="_blank"><i class="facebook icon"></i></a>
+                                <a href="https://www.linkedin.com/in/kirin-patel-aab1a3128" target="_blank"><i class="linkedin icon"></i></a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="uk-container">
-                    <h1 id="projects-web" style="padding-top: 10vh;">Web Projects</h1>
-                    <div id="project">
-                        <div class="uk-card uk-card-default">
-                            <div class="uk-card-header">
-                                <h3 class="uk-card-title"><a href="http://www.kirinpatel.com/portfolio/1" target="_blank">Mr. Demanss History Hub</a></h3>
-                            </div>
-                            <div class="uk-card-body">
-                                <p>Mr. DeManss' History Hub serves to provide students in his classes with information and links to any class material that will aid them in their studies.<br><br>The premise of the project was for my IB ITGS project and was my introduction to web development.</p>
-                            </div>
-                            <div class="uk-card-footer">
-                                <p>Development on this project started August of 2014 and was finished April 2015.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="project">
-                        <div class="uk-card uk-card-default">
-                            <div class="uk-card-header">
-                                <h3 class="uk-card-title"><a href="http://www.kirinpatel.com/dssr" target="_blank">Dossier</a></h3>
-                            </div>
-                            <div class="uk-card-body">
-                                <p>Dossier was designed to provide <a href="https://github.com/elijahcutler" target="_blank">Elijah</a> (a close friend) with an easy to use a Modal system built upon Bootstrap. Dossier aims to provide exposure to Elijah's and other clothing brands in the streetwear world.</p>
-                            </div>
-                            <div class="uk-card-footer">
-                                <p>Development on this project started December of 2015 and was finished April 2016. Small revisions occur to maintain the site.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="project">
-                        <div class="uk-card uk-card-default">
-                            <div class="uk-card-header">
-                                <h3 class="uk-card-title"><a href="https://ajchili.github.io/lfc/" target="_blank">Lindrose Family Cookbook</a></h3>
-                            </div>
-                            <div class="uk-card-body">
-                                <p>Lindrose Family Cookbook is an all in one place for the Lindrose Family to access all of their recipes on the go. With Firebase integration, this Cookbook is the easiest way to store and access their recipes.</p>
-                            </div>
-                            <div class="uk-card-footer">
-                                <p>Development on this project was completed during April 2016. There is currently an update underway to revamp the design and usability of the web app.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="project">
-                        <div class="uk-card uk-card-default">
-                            <div class="uk-card-header">
-                                <h3 class="uk-card-title"><a href="https://ajchili.github.io/cryfelt/" target="_blank">CryFelt</a></h3>
-                            </div>
-                            <div class="uk-card-body">
-                                <p>Jaedyn's (a close friend) personal website was designed around his pictures and music. Allowing for his creativity to be on display for anyone to see.</p>
-                            </div>
-                            <div class="uk-card-footer">
-                                <p>Development on this project was completed during November 2016. Small revisions occur to maintain the site.</p>
+                <div id="blank" class="column">
+                </div>
+            </div>
+        </div>
+        
+        <!-- Modals -->
+        <div id="projects-web" class="ui basic modal">
+            <div class="actions">
+                <div class="ui cancel"><i id="cancel" class="compress icon"></i></div>
+            </div>
+            <div class="ui stackable two column grid">
+                <div class="column">
+                    <div class="ui centered card">
+                        <div class="content">
+                            <div class="header"><a href="http://www.kirinpatel.com/portfolio/1" target="_blank">Mr. Demanss' History Hub</a></div>
+                            <div class="meta">IB ITGS Project</div>
+                            <div class="description">
+                                Mr. DeManss' History Hub serves to provide students in his classes with information and links to any class material that will aid them in their studies.
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="uk-container">
-                    <h1 id="projects-desktop" style="padding-top: 10vh;">Desktop Projects</h1>
-                    <div id="project">
-                        <div class="uk-card uk-card-default">
-                            <div class="uk-card-header">
-                                <h3 class="uk-card-title"><a href="https://github.com/ajchili/traffic_simulator" target="_blank">Traffic Simulator</a></h3>
-                            </div>
-                            <div class="uk-card-body">
-                                <p>The application is based upon <a href="http://www.mindprod.com/project/trafficsimulator" target="_blank">this</a> website. Currently, development will be towards a base project rather than a fully implementable and scalable system such as the ones found in Apple Maps or Google Maps.</p>
-                            </div>
-                            <div class="uk-card-footer">
-                                <p>Traffic Simulator was created September 2016 and is still in development.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="project">
-                        <div class="uk-card uk-card-default">
-                            <div class="uk-card-header">
-                                <h3 class="uk-card-title"><a href="https://ajchili.github.io/feature-extraction" target="_blank">Feature Extraction</a></h3>
-                            </div>
-                            <div class="uk-card-body">
-                                <p>This projects is a set of smaller projects that revolve around feature extraction. Being Java based, this project is aimed at creating GUI based applications that provide a simple feature extraction experience.</p>
-                            </div>
-                            <div class="uk-card-footer">
-                                <p>Development started in February of 2017 and is ongoing.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="project">
-                        <div class="uk-card uk-card-default">
-                            <div class="uk-card-header">
-                                <h3 class="uk-card-title"><a href="https://github.com/ajchili/astar-pathfinding-java" target="_blank">A* Pathfinding Algorithm</a></h3>
-                            </div>
-                            <div class="uk-card-body">
-                                <p>An A* pathfinding algorithm in java.</p>
-                            </div>
-                            <div class="uk-card-footer">
-                                <p>A* Pathfinding Algorithm was created February 2017 and is still in development.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="project">
-                        <div class="uk-card uk-card-default">
-                            <div class="uk-card-header">
-                                <h3 class="uk-card-title"><a href="https://ajchili.github.io/dailyprogrammer-challenges" target="_blank">r/dailyprogrammer challenges</a></h3>
-                            </div>
-                            <div class="uk-card-body">
-                                <p>Dailyprogrammer is about challenging programmers of all skill level with weekly programming challenges. There are 3 challenges a week that are posted at increasing difficulty. Solutions are peer reviewed and redditors can ask the community for feedback and comments.<br><br>I set out to complete these challenges using many different languages in order to expand my knowledge<br><br>You can find more information about this on their reddit wiki page <a href="https://www.reddit.com/r/dailyprogrammer/wiki/index" target="_blank">r/dailyprogrammer</a>.</p>
-                            </div>
-                            <div class="uk-card-footer">
-                                <p>I started working on Dailyprogrammer challenges March of 2017.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="project">
-                        <div class="uk-card uk-card-default">
-                            <div class="uk-card-header">
-                                <h3 class="uk-card-title"><a href="https://github.com/ajchili/coursework" target="_blank">Coursework</a><span class="uk-badge" style="float:right; margin-top: .5em">New</span></h3>
-                            </div>
-                            <div class="uk-card-body">
-                                <p>This repository encompasses all of the coursework I have completed throughout my highschool and college education. Rather than having multiple links on my website for the specific classes that I have taken, this provides a hub to display it all.</p>
-                            </div>
-                            <div class="uk-card-footer">
-                                <p>This repository was build in April of 2017.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="project">
-                        <div class="uk-card uk-card-default">
-                            <div class="uk-card-header">
-                                <h3 class="uk-card-title"><a href="https://github.com/ajchili/bglf" target="_blank">BattleGroundsLootFaster</a><span class="uk-badge" style="float:right; margin-top: .5em">New</span></h3>
-                            </div>
-                            <div class="uk-card-body">
-                                <p>bglf or BattleGroundsLootFaster is a simple <a hfre="https://autohotkey.com/">AutoHotkey</a> script that aides a user in picking up loot faster in PlayerUnknown's BattleGounds. More information about the script and its usage can be found in the Github repository.</p>
-                            </div>
-                            <div class="uk-card-footer">
-                                <p>The script was created in April of 2017.</p>
+                <div class="column">
+                    <div class="ui centered card">
+                        <div class="content">
+                            <div class="header"><a href="http://www.kirinpatel.com/dssr" target="_blank">Dossier</a></div>
+                            <div class="meta">Commissioned Project</div>
+                            <div class="description">
+                                Dossier was designed to provide <a href="https:/github.com/elijahcutler" target="_blank">Elijah</a> (a close friend), with an easy to use a Modal system built upon Bootstrap.<br>Dossier aims to provide exposure to Elijah's and other clothing brands in the streetwear world.
                             </div>
                         </div>
                     </div>
                 </div>
-            </section>
-            <section id="contact" class="uk-section-muted">
-                <div class="uk-section uk-section-muted">
-                    <div class="uk-container uk-text-center">
-                        <div>
-                            <h1>Links</h1>
-                            <div class="uk-flex uk-flex-center">
-                                <a href="https://www.github.com/ajchili" target="_blank" uk-icon="icon: github; ratio: 2" style="margin-right: 1em;"></a>
-                                <a href="https://www.linkedin.com/in/kirin-patel-aab1a3128" target="_blank" uk-icon="icon: linkedin; ratio: 2" style="margin-right: 1em;"></a>
-                                <a href="https://www.facebook.com/kirin.patel.3" target="_blank" uk-icon="icon: facebook; ratio: 2"></a>
-                            </div>
-                        </div>
-                        <div style="margin-top: 5em;">
-                            <h1>Contact</h1>
-                            <p>The best way to contact me is to email me <a href="mailto:kirinpatel@gmail.com">here</a>.</p>
-                        </div>
-                        <div style="margin-top: 5em;">
-                            <h1>Questions</h1>
-                            <div style="margin-top: 2em;">
-                                <h3>Can you make me an app/website/desktop app?</h3>
-                                <p>Of course! I am eager to take on new projects and motivated to get you the product you dream of. Get in contact with me through email or any of the links above to get started.</p>
-                            </div>
-                            <div style="margin-top: 2em;">
-                                <h3>Do I have to pay?</h3>
-                                <p>Unfortunately, I have to charge for my work. However, I won't take all of your money.</p>
-                                <table class="uk-table">
-                                    <thead>
-                                        <tr>
-                                            <th class="uk-text-center">Mobile</th>
-                                            <th class="uk-text-center">Web</th>
-                                            <th class="uk-text-center">Desktop</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>Android: <b class="uk-text-bold">$20</b> per hour</td>
-                                            <td>Websites: <b class="uk-text-bold">$10</b> per hour</td>
-                                            <td>Java apps: <b class="uk-text-bold">$20</b> per hour</td>
-                                        </tr>
-                                        <tr>
-                                            <td>iOS: <b class="uk-text-bold">$5</b> per hour</td>
-                                            <td>Web apps: <b class="uk-text-bold">$5</b> per hour</td>
-                                            <td>C++ apps: <b class="uk-text-bold">$10</b> per hour</td>
-                                        </tr>
-                                        <tr>
-                                            <td></td>
-                                            <td></td>
-                                            <td>Other language apps: <b class="uk-text-bold">$5-10</b> per hour</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                            <div style="margin-top: 2em;">
-                                <h3>Why do you charge different prices per language/platform?</h3>
-                                <p>Pricing is based on my knowledge of a language/platform. The less I know, the less I charge. You shouldn't have to pay for my time spent learning how to make your dream.</p>
+                <div class="column">
+                    <div class="ui centered card">
+                        <div class="content">
+                            <div class="header"><a href="http://www.kirinpatel.com/portfolio/2" target="_blank">Lindrose Family Cookbook</a></div>
+                            <div class="meta">Commissioned Project</div>
+                            <div class="description">
+                                Lindrose Family Cookbook is an all in one place for the Lindrose Family to access all of their recipes on the go. With Firebase integration, this Cookbook is the easiest way to store and access their recipes.
                             </div>
                         </div>
                     </div>
                 </div>
-            </section>
+                <div class="column">
+                    <div class="ui centered card">
+                        <div class="content">
+                            <div class="header"><a href="https://ajchili.github.io/cryfelt/" target="_blank">CryFelt</a></div>
+                            <div class="meta">Commissioned Project</div>
+                            <div class="description">
+                                Jaedyn's (another close friend) personal website was designed around his pictures and music. Allowing for his creativity to be on display for anyone to see.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="projects-mobile" class="ui basic modal">
+            <div class="actions">
+                <div class="ui cancel"><i id="cancel" class="compress icon"></i></div>
+            </div>
+            <div class="ui stackable two column grid">
+                <div class="column">
+                    <div class="ui centered card">
+                        <div class="content">
+                            <div class="header"><a href="http://www.trndstar.com/" target="_blank">TrndStar</a></div>
+                            <div class="meta">Commissioned Project</div>
+                            <div class="description">
+                                "TrndStar aims to bring new features to the social media environment. Currently, there is not a good environment for new upcoming artists to make a name for themselves. TrndStar plans to put these upcomers right in the middle of the action.<br>Users can gain a following by uploading videos, competing, and collaborating. Users can challenge other users and have their videos seen by both users followers. Multiple users can collaborate and create one video to attract as many followers as possible.<br>TrndStar features the ability to upload 90 second videos and gain exposure as a new artist or entertainer."<br>- Official TrndStar statement
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="ui centered card">
+                        <div class="content">
+                            <div class="header"><a href="https://github.com/ajchili/food-tracker-swift" target="_blank">iOS Food Tracker</a></div>
+                            <div class="meta">Hobby Project</div>
+                            <div class="description">
+                                This app was my introduction to iOS development and was centered around <a href="https://developer.apple.com/library/content/referencelibrary/GettingStarted/DevelopiOSAppsSwift/index.html#//apple_ref/doc/uid/TP40015214-CH2-SW1" target="_blank">this</a> tutorial from apple. This app shows a list of meals, including a meal name, rating, and photo. A user can add, remove, or edit a meal. To add a new meal or edit an existing one, users navigate to a different screen where they can specify a name, rating, and photo for a particular meal.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div id="projects-desktop" class="ui basic modal">
+            <div class="actions">
+                <div class="ui cancel"><i id="cancel" class="compress icon"></i></div>
+            </div>
+            <div class="ui stackable two column grid">
+                <div class="column">
+                    <div class="ui centered card">
+                        <div class="content">
+                            <div class="header"><a href="https://ajchili.github.io/dailyprogrammer-challenges" target="_blank">r/dailyprogrammer challenges</a></div>
+                            <div class="meta">Hobby Project</div>
+                            <div class="description">
+                                Dailyprogrammer is about challenging programmers of all skill level with weekly programming challenges. There are 3 challenges a week that are posted at increasing difficulty. Solutions are peer reviewed and redditors can ask the community for feedback and comments. I set out to complete these challenges using many different languages in order to expand my knowledge. You can find more information about this on their Reddit <a href="https://www.reddit.com/r/dailyprogrammer/wiki/index" target="_blank">wiki page</a>.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="ui centered card">
+                        <div class="content">
+                            <div class="header"><a href="https://github.com/ajchili/coursework" target="_blank">Coursework</a></div>
+                            <div class="meta">School Projects</div>
+                            <div class="description">
+                                This repository encompasses all of the coursework I have completed throughout my high school and college education. Rather than having multiple links on my website for the specific classes that I have taken, this provides a hub to display it all.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="ui centered card">
+                        <div class="content">
+                            <div class="header"><a href="https://github.com/ajchili/bglf" target="_blank">BattleGroundsLootFaster</a></div>
+                            <div class="meta">Hobby Project</div>
+                            <div class="description">
+                                bglf or BattleGroundsLootFaster is a simple <a href="https://autohotkey.com/" target="_blank">AutoHotkey</a> script that aids a user in picking up loot faster in PlayerUnknown's BattleGounds. More information about the script and its usage can be found in the Github repository.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div id="contact" class="ui basic modal">
+            <div class="actions">
+                <div class="ui cancel"><i id="cancel" class="compress icon"></i></div>
+            </div>
+            <div class="ui icon header">
+                Send me an email
+            </div>
+            <div class="center content">
+                <p style="text-align: center;">Please contact me at <a href="mailto:kirinpatel@gmail.com">kirinpatel@gmail.com</a> for any inquiries you may have.</p>
+            </div>
+            <div class="ui icon header">
+                or get in contact through social media
+            </div>
+            <div class="center content">
+                <p style="text-align: center;">These links, such as <a href="https://www.github.com/ajchili" target="_blank">Github</a>, <a href="https://www.facebook.com/kirin.patel.3" target="_blank">Facebook</a>, and <a href="https://www.linkedin.com/in/kirin-patel-aab1a3128" target="_blank">LinkedIn</a>, can all be found under my profile.</p>
+            </div>
+        </div>
+        
+        <div id="discord" class="ui basic modal">
+            <div class="actions">
+                <div class="ui cancel"><i id="cancel" class="compress icon"></i></div>
+            </div>
+            <iframe src="https://discordapp.com/widget?id=308698715147730944&theme=light" width="350" height="500" allowtransparency="true" frameborder="0"></iframe>
+        </div>
+        
+        <div id="github-commits" class="ui basic modal">
+            <div class="actions">
+                <div class="ui cancel"><i id="cancel" class="compress icon"></i></div>
+            </div>
+            <div class="ui segment">
+                <div class="calendar">
+                    <div class="ui active inverse dimmer">
+                        <div class="ui text loader">Loading commits</div>
+                    </div>
+                </div>
+            </div>
+            <div class="center content">
+                <p style="text-align: center;">This was created using <a href="https://github.com/IonicaBizau" target="_blank">IonicaBizau's</a> <a href="https://github.com/IonicaBizau/github-calendar" target="_blank">Github Calender</a>.</p>
+            </div>
         </div>
     </body>
 </html>
