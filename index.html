@@ -5,10 +5,10 @@
         
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        <link rel="stylesheet" href="semantic.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.css" />
         <link rel="stylesheet" href="https://cdn.rawgit.com/IonicaBizau/github-calendar/gh-pages/dist/github-calendar.css"/>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script src="semantic.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.js"></script>
         <script src="github-calendar/github-calendar.min.js"></script>
         
         <style>
@@ -251,9 +251,11 @@
             <div class="actions">
                 <div class="ui cancel"><i id="cancel" class="compress icon"></i></div>
             </div>
-            <div class="calendar">
-                <div class="ui active dimmer">
-                    <div class="ui loader"></div>
+            <div class="ui segment">
+                <div class="calendar">
+                    <div class="ui active inverse dimmer">
+                        <div class="ui text loader">Loading commits</div>
+                    </div>
                 </div>
             </div>
             <div class="center content">
