@@ -19,56 +19,78 @@
                 display: block;
             }
             
+            #header-card {
+                border: none;
+                border-radius: 0em;
+                box-shadow: 0px 0px 0px 0px, 0px 0px 0px 0px;
+            }
+            
             #header {
                 padding-top: 1em;
-                margin-left: 2em;
-                margin-right: 2em;
             }
         </style>
     </head>
     <body onload="$('#project-selection').dropdown(); $('#link-selection').dropdown();">
+        <!-- Body of website -->
         <div>
-            <div id="header" class="ui secondary menu">
-                <div id="project-selection" class="ui dropdown item">Projects <i class="dropdown icon"></i>
-                    <div class="menu">
-                    <a class="item" onclick="$('#projects-web').modal('show');">Web</a>
-                    <a class="item" onclick="$('#projects-mobile').modal('show');">Mobile</a>
-                    <a class="item" onclick="$('#projects-desktop').modal('show');">Desktop</a>
+            <div class="ui three column grid">
+                <div class="column">
+                </div>
+                <div class="column">
+                    <div id="header-card" class="ui centered card">
+                        <div id="header" class="ui aligned secondary menu">
+                            <div id="project-selection" class="ui dropdown item">Projects <i class="dropdown icon"></i>
+                                <div class="menu">
+                                <a class="item" onclick="$('#projects-web').modal('show');">Web</a>
+                                <a class="item" onclick="$('#projects-mobile').modal('show');">Mobile</a>
+                                <a class="item" onclick="$('#projects-desktop').modal('show');">Desktop</a>
+                                </div>
+                            </div>
+                            <a class="item" onclick="$('#contact').modal('show');">Contact Me</a>
+                            <div id="link-selection" class="ui dropdown item">Links <i class="dropdown icon"></i>
+                                <div class="menu">
+                                <a onclick="$('#discord').modal('show');" class="item">Discord</a>
+                                <a onclick="GitHubCalendar('.calendar', 'ajchili\\'); $('#github-commits').modal('show');" class="item">Github commits</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <a class="item" onclick="$('#contact').modal('show');">Contact Me</a>
-                <div id="link-selection" class="ui dropdown item">Links <i class="dropdown icon"></i>
-                    <div class="menu">
-                    <a onclick="$('#discord').modal('show');" class="item">Discord</a>
-                    <a onclick="GitHubCalendar('.calendar', 'ajchili\\'); $('#github-commits').modal('show');" class="item">Github commits</a>
+                <div class="column">
+                </div>
+                <div class="column">
+                </div>
+                <div class="column">
+                    <div id="header" class="ui center aligned secondary menu">
+                        <div class="ui centered card">
+                            <div class="image">
+                                <img src="images/profile_picture.JPG">
+                            </div>
+                                <div class="content">
+                                <a class="header">Kirin Patel</a>
+                                <div class="meta">
+                                    <span class="date">Software Developer</span>
+                                </div>
+                                <div class="description">
+                                    I develop apps for fun and love to work on projects with others.
+                                </div>
+                            </div>
+                            <div class="extra content">
+                                <div class="ui center aligned container">
+                                    <a href="https://www.github.com/ajchili" target="_blank"><i class="github icon"></i></a>
+                                    <a href="https://www.facebook.com/kirin.patel.3" target="_blank"><i class="facebook icon"></i></a>
+                                    <a href="https://www.linkedin.com/in/kirin-patel-aab1a3128" target="_blank"><i class="linkedin icon"></i></a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div>
-                <div class="ui centered card">
-                    <div class="image">
-                        <img src="images/profile_picture.JPG">
-                    </div>
-                        <div class="content">
-                        <a class="header">Kirin Patel</a>
-                        <div class="meta">
-                            <span class="date">Software Developer</span>
-                        </div>
-                        <div class="description">
-                            I develop apps for fun and love to work on projects with others.
-                        </div>
-                    </div>
-                    <div class="extra content">
-                        <div class="ui center aligned container">
-                            <a href="https://www.github.com/ajchili" target="_blank"><i class="github icon"></i></a>
-                            <a href="https://www.facebook.com/kirin.patel.3" target="_blank"><i class="facebook icon"></i></a>
-                            <a href="https://www.linkedin.com/in/kirin-patel-aab1a3128" target="_blank"><i class="linkedin icon"></i></a>
-                        </div>
-                    </div>
+                <div class="column">
                 </div>
             </div>
         </div>
         
+        <!-- Modals -->
         <div id="projects-web" class="ui basic modal">
             <div class="ui stackable two column grid">
                 <div class="column">
