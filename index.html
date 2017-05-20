@@ -10,6 +10,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.js"></script>
         <script src="github-calendar/github-calendar.min.js"></script>
+        <script type="text/javascript">var submitted=false;</script>
         
         <style>
             body {
@@ -266,54 +267,35 @@
             <div class="actions">
                 <div class="ui cancel"><i id="cancel" class="compress icon"></i></div>
             </div>
-            <div class="ui icon header">
-                Send me an email
-            </div>
             <div class="center content">
                 <div class="ui centered card">
                     <div class="content">
+                        <div class="header">
+                            <p style="text-align: center;">Send me an email</p>
+                        </div>
                         <div class="ui form">
-                            <form method="POST" action="http://formspree.io/kirinpatel@gmail.com" target="verify_email">
+                            <form name="gform" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSdZfxXCXXmxKZBgO5SDXPLELB58tpa3iM_DDOp2PXMXaVFhBg/formResponse?" target="hidden_iframe" onsubmit="submitted=true;">
                                 <div class="field">
                                     <label>Name</label>
-                                    <input type="text" name="name" placeholder="Name">
+                                    <input type="text" name="entry.810895053" id="entry.810895053" placeholder="Name">
                                 </div>
                                 <div class="field">
                                     <label>Email Address</label>
-                                    <input type="email" name="email" placeholder="Email Address">
+                                    <input type="email" name="entry.1740606675" id="entry.1740606675" placeholder="Email Address">
                                 </div>
                                 <div class="field">
                                     <label>Subject</label>
-                                    <input type="text" name="subject" placeholder="Subject">
+                                    <input type="text" name="entry.1016558372" id="entry.1016558372" placeholder="Subject">
                                 </div>
                                 <div class="field">
                                     <label>Message</label>
-                                    <textarea rows="2" type="text" name="message" placeholder="Message"></textarea>
+                                    <textarea rows="2" type="text" name="entry.289081751" id="entry.289081751" placeholder="Message"></textarea>
                                 </div>
-                                <button class="ui centered submit button" type="submit" onclick="loadEmailVerification()">Send</button>
+                                <button class="ui centered submit button" type="submit" style="width: 100%;">Send</button>
                             </form>
+                            <iframe name="hidden_iframe" id="hidden_iframe" style="display: none;" onload="if(submitted) {}"></iframe>
                         </div>
                     </div>
-                    <div class="extra content">
-                        <p style="text-align: center;">Made with <a href="https://formspree.io/" target="_blank">formspree.io</a></p>
-                    </div>
-                </div>
-            </div>
-            <div class="ui icon header">
-                or get in contact through social media
-            </div>
-            <div class="center content">
-                <p style="text-align: center;">These links, such as <a href="https://www.github.com/ajchili" target="_blank">Github</a>, <a href="https://www.facebook.com/kirin.patel.3" target="_blank">Facebook</a>, and <a href="https://www.linkedin.com/in/kirin-patel-aab1a3128" target="_blank">LinkedIn</a>, can all be found under my profile.</p>
-            </div>
-        </div>
-        
-        <div id="verifyEmail" class="ui basic modal">
-            <div class="actions">
-                <div class="ui cancel"><i id="cancel" class="compress icon"></i></div>
-            </div>
-            <div id="verifyEmailCard" class="ui centered card">
-                <div class="image">
-                    <iframe id="verify_email" name="verify_email" frameborder="0"></iframe>
                 </div>
             </div>
         </div>
@@ -350,11 +332,6 @@
                 } else {
                     links.style.display = "none";
                 }
-            }
-            
-            function loadEmailVerification() {
-                $('#contact').modal('hide');
-                $('#verifyEmail').modal('show');
             }
         </script>
     </body>
