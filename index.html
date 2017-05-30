@@ -11,9 +11,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.js"></script>
     <script src="github-calendar/github-calendar.min.js"></script>
-    <script type="text/javascript">
-        var submitted = false;
-    </script>
 
     <style>
         body {
@@ -306,9 +303,9 @@
                                 <label>Message</label>
                                 <textarea rows="2" type="text" name="entry.289081751" id="entry.289081751" placeholder="Message"></textarea>
                             </div>
-                            <button class="ui centered submit button" type="submit" style="width: 100%;">Send</button>
+                            <button class="ui centered submit button" type="submit" style="width: 100%;" onclick="$('#sent').modal('show');">Send</button>
                         </form>
-                        <iframe name="hidden_iframe" id="hidden_iframe" style="display: none;" onload="if(submitted) {}"></iframe>
+                        <iframe name="hidden_iframe" id="hidden_iframe" style="display: none;"></iframe>
                     </div>
                 </div>
             </div>
@@ -335,6 +332,18 @@
         </div>
         <div class="center content">
             <p style="text-align: center;">This was created using <a href="https://github.com/IonicaBizau" target="_blank">IonicaBizau's</a> <a href="https://github.com/IonicaBizau/github-calendar" target="_blank">Github Calender</a>.</p>
+        </div>
+    </div>
+
+    <div id="sent" class="ui basic modal">
+        <div class="actions">
+            <div class="ui cancel"><i id="cancel" class="compress icon"></i></div>
+        </div>
+        <div class="ui icon header">
+            Thank you!
+        </div>
+        <div class="center content">
+            <p style="text-align: center;">I will respond back asap!</p>
         </div>
     </div>
 
