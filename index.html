@@ -62,7 +62,6 @@
             background: #FFFFFF;
             color: rgba(0, 0, 0, 0.85);
         }
-
     </style>
 </head>
 
@@ -87,6 +86,7 @@
                             <div class="menu">
                                 <a onclick="$('#discord').modal('show');" class="item">Discord</a>
                                 <a id="github-calender-menu" onclick="GitHubCalendar('.calendar', 'ajchili'); $('#github-commits').modal('show');" class="item">Github commits</a>
+                                <a onclick="$('#projects').modal('show');" class="item">Current Projects</a>
                             </div>
                         </div>
                     </div>
@@ -363,6 +363,154 @@
             </div>
         </div>
 
+        <div id="projects" class="ui basic modal">
+            <div class="actions">
+                <div class="ui cancel"><i id="cancel" class="compress icon"></i></div>
+            </div>
+            <div class="ui stackable three column grid">
+                <div class="column">
+                    <div class="ui centered card">
+                        <div class="content">
+                            <div class="header"><a href="http://couplelist.kirinpatel.com/" target="_blank">Couple List</a></div>
+                            <div class="meta">Status:
+                                <div class="ui small progress">
+                                    <div class="bar" style="width: 60%;">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="description">
+                                <div class="ui bulleted list">
+                                    <div class="item">Finish Firebase Deep Linking for iOS app</div>
+                                    <div class="item">Push iOS app to App Store</div>
+                                    <div class="item">Refactor Android app</div>
+                                    <div class="item">Implement revision system to show previous edits</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="ui centered card">
+                        <div class="content">
+                            <div class="header"><a href="https://github.com/ajchili/feature-extraction" target="_blank">Feature Extraction</a></div>
+                            <div class="meta">Status:
+                                <div class="ui small progress">
+                                    <div class="bar" style="width: 8%;">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="description">
+                                <div class="description">
+                                    <div class="ui bulleted list">
+                                        <div class="item">Research and develop corner detection program</div>
+                                        <div class="item">Research and develop blob detection program</div>
+                                        <div class="item">Research and develop ridge detection program</div>
+                                        <div class="item">Research and develop edge direction (curvature) program</div>
+                                        <div class="item">Research and develop changing intensity program</div>
+                                        <div class="item">Research and develop autocorrelation program</div>
+                                        <div class="item">Research and develop thresholding program</div>
+                                        <div class="item">Research and develop blob extraction program</div>
+                                        <div class="item">Research and develop template matching program</div>
+                                        <div class="item">Research and develop hough transform program</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="ui centered card">
+                        <div class="content">
+                            <div class="header"><a href="https://github.com/ajchili/gwitter" target="_blank">gwitter</a></div>
+                            <div class="meta">Status:
+                                <div class="ui small progress">
+                                    <div class="bar" style="width: 90%;">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="description">
+                                <div class="ui bulleted list">
+                                    <div class="item">Create an evaluation script</div>
+                                    <div class="item">Create a script to grab tweets from a provided twitter handle</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="ui centered card">
+                        <div class="content">
+                            <div class="header">Contract work with <a href="https://www.rainn.org/" target="_blank">RAINN</a></div>
+                            <div class="meta">On going</div>
+                            <div class="description">
+                                I have been contracted by RAINN to develop and maintain mobile and web based solutions.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="ui centered card">
+                        <div class="content">
+                            <div class="header"><a href="https://github.com/ajchili/DropTop" target="_blank">DropTop</a></div>
+                            <div class="meta">Status:
+                                <div class="ui small indicating progress">
+                                    <div class="bar" style="width: 5%;">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="description">
+                                <div class="ui bulleted list">
+                                    <div class="item">Setup Firebase backend</div>
+                                    <div class="item">Create a web based solution</div>
+                                    <div class="item">Develop iOS app</div>
+                                    <div class="item">Develop Android app</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="ui centered card">
+                        <div class="content">
+                            <div class="header"><a href="https://github.com/ajchili/DDSSS" target="_blank">DDSSS</a></div>
+                            <div class="meta">Status:
+                                <div class="ui small indicating progress">
+                                    <div class="bar" style="width: 85%;">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="description">
+                                <div class="ui bulleted list">
+                                    <div class="item">Properly pull Instagram posts</div>
+                                    <div class="item">Properly pull Soundcloud posts</div>
+                                    <div class="item">Properly pull Mixcloud posts</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="ui centered card">
+                        <div class="content">
+                            <div class="header"><a href="https://github.com/ajchili/simsum" target="_blank">simsum</a></div>
+                            <div class="meta">Status:
+                                <div class="ui small indicating progress">
+                                    <div class="bar" style="width: 90%;">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="description">
+                                <div class="ui bulleted list">
+                                    <div class="item">Train tesseract</div>
+                                    <div class="item">Implement file creation system</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div id="sent" class="ui basic modal">
             <div class="actions">
                 <div class="ui cancel"><i id="cancel" class="compress icon"></i></div>
@@ -374,19 +522,19 @@
                 <p style="text-align: center;">I will respond back asap!</p>
             </div>
         </div>
+    </div>
 
-        <script>
-            function loadGithubCalender() {
-                var links = document.getElementById('github-calender-menu');
+    <script>
+        function loadGithubCalender() {
+            var links = document.getElementById('github-calender-menu');
 
-                if ($(window).width() > 723) {
-                    links.style.display = "block";
-                } else {
-                    links.style.display = "none";
-                }
+            if ($(window).width() > 723) {
+                links.style.display = "block";
+            } else {
+                links.style.display = "none";
             }
-
-        </script>
+        }
+    </script>
 </body>
 
 </html>
