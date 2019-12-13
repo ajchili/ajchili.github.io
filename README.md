@@ -8,6 +8,6 @@ throughout my software engineering career.
 - [LinkedIn](https://www.linkedin.com/in/kirinpatel)
 
 ## Table of Contents
-- [2019](./2019)
-    - [December](./2019/December)
+- 2019
+    - December
         - [12th](./2019/December/12/README.md)
