@@ -28,5 +28,5 @@ By breaking down my time into these categories, I can see where I am dedicating
 the most amount of my time and cut back or add time to each category
 accordingly. Then once changes are made, I can compare time spent in a previous
 week with another week to determine the effectiveness of this plan. Ideally I
-would make an app to track this time, such as a simple web app but I think it
+would make an app to track this time, such as a simple web app, but I think it
 will be more efficient to just keep a note file with these times within it.
