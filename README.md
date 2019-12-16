@@ -11,3 +11,4 @@ throughout my software engineering career.
 - 2019
     - December
         - [12th](./2019/December/12/README.md)
+        - [16th](./2019/December/16/README.md)
