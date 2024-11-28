@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Kirin Patel</title>
+    <style>
+      :root {
+        --bg-color: #000;
+        --text-color: #fff;
+        --text-color-secondary: #03ffff;
+      }
+
+      @media (prefers-color-scheme: light) {
+        :root {
+          --bg-color: #fff;
+          --text-color: #000;
+        }
+      }
+
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg-color: #000;
+          --text-color: #fff;
+        }
+      }
+
+      body {
+        display: flex;
+        margin: 0;
+        padding: 0;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        min-height: 100dvh;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+          sans-serif;
+        background: var(--bg-color);
+        color: var(--text-color);
+      }
+
+      a {
+        font-weight: bold;
+        color: var(--text-color);
+      }
+
+      a:active {
+        color: var(--text-color);
+      }
+
+      a:hover {
+        color: var(--text-color-secondary);
+      }
+
+      .content-wrapper {
+        padding: 2rem;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="content-wrapper">
+      <h1>I'm Kirin Patel</h1>
+      <p>
+        I currently work at
+        <a href="{{ current_job.link }}">{{ current_job.company_name }}</a>.
+        I've previously worked at
+      </p>
+      <ul>
+        {% for job in previous_jobs %}
+        <li><a href="{{ job.link }}">{{ job.company_name }}</a></li>
+        {% endfor %}
+      </ul>
+      <a href="https://www.linkedin.com/in/kirinpatel/">Contact Me</a>
+    </div>
+  </body>
+</html>
