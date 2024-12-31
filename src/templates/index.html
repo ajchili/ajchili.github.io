@@ -13,19 +13,53 @@
   </head>
 
   <body>
-    <div class="content-wrapper">
-      <h1>I'm Kirin Patel</h1>
-      <p>
-        I currently work at
-        <a href="{{ current_job.link }}">{{ current_job.company_name }}</a>.
-        I've previously worked at
-      </p>
-      <ul>
-        {% for job in previous_jobs %}
-        <li><a href="{{ job.link }}">{{ job.company_name }}</a></li>
+    <div class="hero">
+      <div class="content-wrapper">
+        <h1>I'm Kirin Patel</h1>
+        <p>
+          I am a full-stack software engineer working at
+          <a href="{{ current_job.link }}">{{ current_job.name }}</a>.
+          <br />I've previously worked at
+        </p>
+        <ul>
+          {% for job in previous_jobs %}
+          <li><a href="{{ job.link }}">{{ job.name }}</a></li>
+          {% endfor %}
+        </ul>
+        <p>
+          <a href="https://www.linkedin.com/in/kirinpatel/">Contact Me</a>
+        </p>
+        <p>
+          <a href="#projects">View Projects</a>
+        </p>
+      </div>
+    </div>
+    <hr style="width: 60%" />
+    <div id="projects" class="projects">
+      <div class="content-wrapper">
+        <h1>Projects</h1>
+        {% for project in projects %}
+        <h2>{{ project.name }}</h2>
+        <div style="display: grid; grid: auto-flow / 1fr 1fr; gap: 2px">
+          {% for image_url in project.image_urls %}
+          <img width="100%" src="{{ image_url }}" />
+          {% endfor %}
+        </div>
+        <p>{{ project.details}}</p>
+        <p>
+          {% if project.github_link != None %}
+          <a href="{{ project.github_link }}" target="_blank">Github</a>
+          {% endif %} {% if project.link != None %}
+          <a href="{{ project.link }}">View</a>
+          {% endif %}
+        </p>
         {% endfor %}
-      </ul>
-      <a href="https://www.linkedin.com/in/kirinpatel/">Contact Me</a>
+      </div>
+    </div>
+    <hr style="width: 60%" />
+    <div class="footer">
+      <p>Made with 🐍, 🐳, and ❤️.</p>
+      <a href="https://github.com/ajchili/ajchili.github.io">View Source</a>
     </div>
   </body>
 </html>
