@@ -1,0 +1,21 @@
+services:
+  # https://github.com/docker/compose/issues/11773#issuecomment-2132257344
+  dummy-watch-workaround:
+    image: alpine:latest
+    init: true
+    command: ["sh", "-c", "while true; do sleep 2; done"]
+  website:
+    build: .
+    command: flask --app src/app.py run --host=0.0.0.0 --port=5001
+    stop_signal: SIGINT
+    ports:
+      - 5001:5001
+    develop:
+      watch:
+        - action: sync+restart
+          path: ./src
+          target: /app/src
+          ignore:
+            - __pycache__/
+        - action: rebuild
+          path: Dockerfile
