@@ -1,5 +1,5 @@
 from flask import Flask, render_template
-from data import current_job, previous_jobs, projects
+from .data import current_job, previous_jobs, projects
 
 app = Flask(__name__)
 app.config.update(TEMPLATES_AUTO_RELOAD=True)
