@@ -20,7 +20,7 @@ class Project():
 current_job: Job = Job(name="Datavant", link="https://www.datavant.com/")
 previous_jobs: List[Job] = [
     Job(name="AWS", link="https://aws.amazon.com/console/"),
-    Job(name="Leiods", link="https://www.leidos.com/"),
+    Job(name="Leidos", link="https://www.leidos.com/"),
     Job(name="Google", link="https://cloud.google.com/"),
     Job(name="RAINN", link="https://rainn.org/"),
 ]
