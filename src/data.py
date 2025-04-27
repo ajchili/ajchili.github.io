@@ -48,7 +48,7 @@ projects: List[Project] = [
         details="Indexer for the Kiesel Guitars list of in-stock instruments, offering the ability to filter instruments by all specs.",
         github_link="https://github.com/ajchili/kiesel-in-stock-finder",
         image_urls=[
-                "https://kirinpatel.nyc3.digitaloceanspaces.com/images/kiesel-in-stock-finder.png"
+                "https://kirinpatel.nyc3.digitaloceanspaces.com/images/kiesel-in-stock-finder.jpg"
         ],
         link="https://kiesel.kirinpatel.com"
     ),
@@ -57,7 +57,7 @@ projects: List[Project] = [
         details="Portfolio website for my videography business.",
         github_link="https://github.com/ajchili/dossiermade",
         image_urls=[
-            "https://kirinpatel.nyc3.digitaloceanspaces.com/images/dossier-made.png"
+            "https://kirinpatel.nyc3.digitaloceanspaces.com/images/dossier-made.jpg"
         ],
         link="https://dossiermade.com"
     ),
@@ -66,7 +66,7 @@ projects: List[Project] = [
         details="YouTube video summary tool which uses captions for car repair videos to generate a list of tools and steps required for a DIY repair.",
         github_link="https://github.com/ajchili/visum",
         image_urls=[
-                "https://kirinpatel.nyc3.digitaloceanspaces.com/images/visum.png"
+                "https://kirinpatel.nyc3.digitaloceanspaces.com/images/visum.jpg"
         ],
         link="https://visum.kirinpatel.com"
     ),
