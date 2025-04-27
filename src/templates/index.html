@@ -42,7 +42,7 @@
         <h2>{{ project.name }}</h2>
         <div style="display: grid; grid: auto-flow / 1fr 1fr; gap: 2px">
           {% for image_url in project.image_urls %}
-          <img width="100%" src="{{ image_url }}" />
+          <img width="100%" src="{{ image_url }}" loading="lazy" />
           {% endfor %}
         </div>
         <p>{{ project.details}}</p>
