@@ -70,5 +70,49 @@ a:hover {
 
 .content-wrapper {
   padding: 2rem;
-  max-width: 60%;
+  max-width: 65%;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: row;
+  gap: 10%;
+  align-items: center;
+}
+
+@media (max-width: 1000px) {
+  .hero-content {
+    flex-direction: column;
+  }
+}
+
+a {
+  line-height: 1;
+
+  text-transform: uppercase;
+
+  text-box-trim: trim-end;
+  text-box-edge: cap alphabetic;
+  text-shadow: 0 2ex;
+  text-decoration: none;
+
+  display: inline-block;
+  overflow: hidden;
+
+  span {
+    position: relative;
+    display: inline-block;
+
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.2s;
+    transition-delay: calc(sibling-index() * 0.015s);
+  }
+
+  &:hover {
+    color: var(--text-color-secondary);
+
+    span {
+      translate: 0 -2ex;
+    }
+  }
 }

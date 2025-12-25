@@ -1,0 +1,42 @@
+<style>
+  a {
+    font-size: 300px;
+    line-height: 1;
+
+    color: grey;
+    text-transform: uppercase;
+    font-weight: 900;
+
+    text-box-trim: trim-both;
+    text-box-edge: cap alphabetic;
+    text-shadow: 0 2ex;
+    text-decoration: none;
+
+		display: block;
+    overflow: hidden;
+    padding: 3px 0px;
+
+    span {
+      position: relative;
+      display: inline-block;
+
+      transition-timing-function: ease-out;
+      transition-duration: 0.2s;
+      transition-delay: calc(sibling-index() * 0.05s);
+    }
+
+    &:hover {
+      color: black;
+
+      span {
+        translate: 0 -2ex;
+      }
+    }
+
+
+  }
+</style>
+
+<a href="#">
+  <span>K</span><span>i</span><span>r</span><span>i</span><span>n</span>
+</a>

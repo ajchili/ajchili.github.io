@@ -3,4 +3,4 @@ python = "3.14"
 uv = "0.9.10"
 
 [tasks.start]
-run = "uv run flask --app src/main.py run --debug"
+run = "uv run flask --app src/app.py run --debug"

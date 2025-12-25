@@ -10,29 +10,38 @@
       type="text/css"
       href="{{ url_for('static', filename='styles/index.css') }}"
     />
-    <meta name="google-adsense-account" content="ca-pub-2342253096465314">
+    <meta name="google-adsense-account" content="ca-pub-2342253096465314" />
   </head>
 
   <body>
     <div class="hero">
       <div class="content-wrapper">
-        <h1>I'm Kirin Patel</h1>
-        <p>
-          I am a full-stack software engineer working at
-          <a href="{{ current_job.link }}">{{ current_job.name }}</a>.
-          <br />I've previously worked at
-        </p>
-        <ul>
-          {% for job in previous_jobs %}
-          <li><a href="{{ job.link }}">{{ job.name }}</a></li>
-          {% endfor %}
-        </ul>
-        <p>
-          <a href="https://www.linkedin.com/in/kirinpatel/">Contact Me</a>
-        </p>
-        <p>
-          <a href="#projects">View Projects</a>
-        </p>
+        <div class="hero-content">
+          <img
+            src="https://kirinpatel.nyc3.digitaloceanspaces.com/images/kirin.jpg"
+            width="200"
+            height="300"
+          />
+          <div>
+            <h1>I'm Kirin Patel</h1>
+            <p>
+              I am a full-stack software engineer working at
+              <a href="{{ current_job.link }}">{{ current_job.name }}</a>. I've
+              previously worked at
+            </p>
+            <ul>
+              {% for job in previous_jobs %}
+              <li><a href="{{ job.link }}">{{ job.name }}</a></li>
+              {% endfor %}
+            </ul>
+            <p>
+              <a href="https://www.linkedin.com/in/kirinpatel/">Contact Me</a>
+            </p>
+            <p>
+              <a href="#projects">View Projects</a>
+            </p>
+          </div>
+        </div>
       </div>
     </div>
     <hr style="width: 60%" />
@@ -63,4 +72,23 @@
       <a href="https://github.com/ajchili/ajchili.github.io">View Source</a>
     </div>
   </body>
+  <script>
+    const segmenter = new Intl.Segmenter("en");
+    const $aTags = document.getElementsByTagName("a");
+
+    for (const $aTag of $aTags) {
+      const textContent = $aTag.textContent;
+      const parts = Array.from(segmenter.segment(textContent));
+
+      $aTag.innerHTML = parts
+        .map(({ segment }) => {
+          if (segment === " ") {
+            return "&nbsp;";
+          }
+
+          return `<span>${segment}</span>`;
+        })
+        .join("");
+    }
+  </script>
 </html>
