@@ -25,17 +25,17 @@
           <div>
             <h1>I'm Kirin Patel</h1>
             <p>
-              I am a full-stack software engineer working at
-              <a href="{{ current_job.link }}">{{ current_job.name }}</a>. I've
+              I am a senior software engineer working at
+              <a href="{{ data.jobs.current.link }}" target="_blank">{{ data.jobs.current.name }}</a> and founder of <a href="{{ data.businesses.pod_enterprise_engineering.link }}" target="_blank">{{ data.businesses.pod_enterprise_engineering.name }}</a>. I've
               previously worked at
             </p>
             <ul>
-              {% for job in previous_jobs %}
-              <li><a href="{{ job.link }}">{{ job.name }}</a></li>
+              {% for job in data.jobs.previous %}
+              <li><a href="{{ job.link }}" target="_blank">{{ job.name }}</a></li>
               {% endfor %}
             </ul>
             <p>
-              <a href="https://www.linkedin.com/in/kirinpatel/">Contact Me</a>
+              <a href="https://www.linkedin.com/in/kirinpatel/" target="_blank">Contact Me</a>
             </p>
             <p>
               <a href="#projects">View Projects</a>
@@ -48,7 +48,7 @@
     <div id="projects" class="projects">
       <div class="content-wrapper">
         <h1>Projects</h1>
-        {% for project in projects %}
+        {% for project in data.projects %}
         <h2>{{ project.name }}</h2>
         <div style="display: grid; grid: auto-flow / 1fr 1fr; gap: 2px">
           {% for image_url in project.image_urls %}

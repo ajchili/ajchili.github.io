@@ -2,10 +2,10 @@ build:
 	docker build . -t personal-website
 
 clean:
-	docker-compose down
+	docker compose down
 
 dev:
-	docker-compose up --watch --build
+	docker compose up --watch --build
 
 stop:
-	docker-compose stop
+	docker compose stop

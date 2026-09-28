@@ -1,7 +1,7 @@
 :root {
   --bg-color: #000;
   --text-color: #fff;
-  --text-color-secondary: #03ffff;
+  --text-color-secondary: #48BA1B;
 }
 
 @media (prefers-color-scheme: light) {

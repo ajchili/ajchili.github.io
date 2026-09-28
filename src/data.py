@@ -17,8 +17,10 @@ class Project():
     link: str | None = None
 
 
-current_job: Job = Job(name="Datavant", link="https://www.datavant.com/")
+pod_enterprise_engineering: Job = Job(name="Pod Enterprise Engineering", link="https://podenterpriseengineering.com/")
+current_job: Job = Job(name="Cykor", link="https://www.cykor.com/")
 previous_jobs: List[Job] = [
+    Job(name="Datavant", link="https://www.datavant.com/"),
     Job(name="AWS", link="https://aws.amazon.com/console/"),
     Job(name="Leidos", link="https://www.leidos.com/"),
     Job(name="Google", link="https://cloud.google.com/"),
